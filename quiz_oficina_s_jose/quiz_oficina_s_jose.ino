@@ -8,10 +8,7 @@ const int tomada2 = 10;
 const int tomada3 = 11;
 const int tomada4 = 13;
 
-int button1State;
-int button2State;
-int button3State;
-int button4State;
+int button1State, button2State, button3State, button4State;
 
 void setup() {
   Serial.begin(9600);
@@ -25,26 +22,22 @@ void setup() {
   pinMode(button4Pin, INPUT_PULLUP);
 }
 
-bool isAnyButtonPressed(){
-  return (button1State || button2State || button3State || button4State);
-}
-
-
 void loop() {
   
   button1State = digitalRead(button1Pin);
   button2State = digitalRead(button2Pin);
   button3State = digitalRead(button3Pin);
   button4State = digitalRead(button4Pin);
-  
-  Serial.print((button1State == HIGH) ? "HIGH" : "LOW");
-  Serial.print("\t");
-  Serial.print((button2State == HIGH) ? "HIGH" : "LOW");
-  Serial.print("\t");
-  Serial.print((button3State == HIGH) ? "HIGH" : "LOW");
-  Serial.print("\t");
-  Serial.print((button4State == HIGH) ? "HIGH" : "LOW");
-  Serial.print("\n");
+
+// Stuff for debugging
+//  Serial.print((button1State == HIGH) ? "HIGH" : "LOW");
+//  Serial.print("\t");
+//  Serial.print((button2State == HIGH) ? "HIGH" : "LOW");
+//  Serial.print("\t");
+//  Serial.print((button3State == HIGH) ? "HIGH" : "LOW");
+//  Serial.print("\t");
+//  Serial.print((button4State == HIGH) ? "HIGH" : "LOW");
+//  Serial.print("\n");
 
   // check if the pushbutton is pressed (LOW in our case).
   while (button1State == LOW){
