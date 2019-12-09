@@ -13,7 +13,7 @@ float temperatureHighest = -1000;
 #define DHTpin 14 //D5 of NodeMCU is GPIO14
 
 void setup(){
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println();
   String thisBoard= ARDUINO_BOARD;
   Serial.println(thisBoard);
