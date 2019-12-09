@@ -44,23 +44,25 @@ void loop() {
     digitalWrite(tomada1, LOW);
     button1State = digitalRead(button1Pin);
   }
+  digitalWrite(tomada1, HIGH);
+
   while (button2State == LOW){
     digitalWrite(tomada2, LOW);
     button2State = digitalRead(button2Pin);
   }
+  digitalWrite(tomada2, HIGH);
+
   while (button3State == LOW){
     digitalWrite(tomada3, LOW);
     button3State = digitalRead(button3Pin);
-
   }
+  digitalWrite(tomada3, HIGH);
+
   while (button4State == LOW){
     digitalWrite(tomada4, LOW);
     button4State = digitalRead(button4Pin);
   }
   
-  digitalWrite(tomada1, HIGH);
-  digitalWrite(tomada2, HIGH);
-  digitalWrite(tomada3, HIGH);
   digitalWrite(tomada4, HIGH);
 
 }
